@@ -15,7 +15,11 @@ class BinomialHeap {
     }
 }
 
-BinomialHeap heap = new BinomialHeap();
-heap.insert(5);
-heap.insert(2);
-heap.insert(8);
+public class Main {
+    public static void main(String[] args) {
+        BinomialHeap heap = new BinomialHeap();
+        heap.insert(5);
+        heap.insert(2);
+        heap.insert(8);
+    }
+}
