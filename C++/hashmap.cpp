@@ -3,13 +3,12 @@
 #include <string>
 
 int main() {
-    std::unordered_map<std::string, std::any> hashmap;
-    hashmap["name"] = std::string("Alice");
-    hashmap["age"] = 25;
-    hashmap["city"] = std::string("Moscow");
+    std::unordered_map<std::string, std::string> hashmap;
+    hashmap["name"] = "Alice";
+    hashmap["city"] = "Moscow";
     
-    std::cout << std::any_cast<std::string>(hashmap["name"]) << std::endl;  // Alice
-    hashmap["age"] = 26;  // Изменение значения
+    std::cout << hashmap["name"] << std::endl;  // Alice
+    hashmap["city"] = "Saint Petersburg";
     
     return 0;
 }
