@@ -8,8 +8,8 @@ int main() {
     hashmap["age"] = 25;
     hashmap["city"] = std::string("Moscow");
     
-    std::cout << std::any_cast<std::string>(hashmap["name"]) << std::endl;
-    hashmap["age"] = 26;
+    std::cout << std::any_cast<std::string>(hashmap["name"]) << std::endl;  // Alice
+    hashmap["age"] = 26;  // Изменение значения
     
     return 0;
 }
