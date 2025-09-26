@@ -1,17 +1,21 @@
-class BinomialHeap:
-    def __init__(self):
-        self.trees = []
-    
-    def insert(self, value):
-        new_heap = BinomialHeap()
-        new_heap.trees.append(value)
-        self.merge(new_heap)
-    
-    def merge(self, other):
-        self.trees.extend(other.trees)
-        self.trees.sort()
+import java.util.*;
 
-heap = BinomialHeap()
-heap.insert(5)
-heap.insert(2)
-heap.insert(8)
+class BinomialHeap {
+    private List<Integer> trees = new ArrayList<>();
+    
+    public void insert(int value) {
+        BinomialHeap newHeap = new BinomialHeap();
+        newHeap.trees.add(value);
+        merge(newHeap);
+    }
+    
+    public void merge(BinomialHeap other) {
+        trees.addAll(other.trees);
+        Collections.sort(trees);
+    }
+}
+
+BinomialHeap heap = new BinomialHeap();
+heap.insert(5);
+heap.insert(2);
+heap.insert(8);
