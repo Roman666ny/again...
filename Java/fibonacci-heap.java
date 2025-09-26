@@ -14,8 +14,12 @@ class FibonacciHeap {
     }
 }
 
-FibonacciHeap heap = new FibonacciHeap();
-heap.insert(5);
-heap.insert(2);
-heap.insert(8);
-System.out.println(heap.getMin());  // 2
+public class Main {
+    public static void main(String[] args) {
+        FibonacciHeap heap = new FibonacciHeap();
+        heap.insert(5);
+        heap.insert(2);
+        heap.insert(8);
+        System.out.println(heap.getMin());  // 2
+    }
+}
