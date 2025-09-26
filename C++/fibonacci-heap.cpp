@@ -1,22 +1,25 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <stdexcept>
 
 class FibonacciHeap {
 private:
-    int* minNode = nullptr;
+    int minNode;
+    bool hasMin = false;
     std::vector<int> nodes;
     
 public:
     void insert(int value) {
         nodes.push_back(value);
-        if (minNode == nullptr || value < *minNode) {
-            minNode = &nodes.back();
+        if (!hasMin || value < minNode) {
+            minNode = value;
+            hasMin = true;
         }
     }
     
     int getMin() {
-        return *minNode;
+        if (!hasMin) throw std::runtime_error("Heap is empty");
+        return minNode;
     }
 };
 
