@@ -23,3 +23,5 @@ public class Main {
         System.out.println(heap.getMin());  // 2
     }
 }
+
+// Дементеев Роман, все права защищены xd
